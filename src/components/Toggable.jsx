@@ -1,4 +1,5 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
 function Toggable({children, buttonLabel}) {
     const [visible, setVisible] = useState(false)
     const hideWhenVisible = {display:visible?"none":""}
@@ -15,5 +16,7 @@ function Toggable({children, buttonLabel}) {
         </div>    
     )
 }
-
+Toggable.propTypes = {
+    buttonLabel: PropTypes.string.isRequired
+}
 export default Toggable
