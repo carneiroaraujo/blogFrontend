@@ -14,13 +14,13 @@ function Blog({ blog, isOwned, onLikeIncrement, onRemove }) {
     return (
 
         <div className="blog">
-            <div>
+            <div className="head">
                 {blog.title} {blog.author} <button onClick={() => setShowDetails(!showDetails)}>{showDetails ? "hide" : "view"}
                 </button>
             
 
             </div>
-            <div style={{ display: showDetails ? "" : "none" }}>
+            <div style={{ display: showDetails ? "" : "none" }} className="body">
                 {blog.url} <br />
                 likes {blog.likes} <button onClick={handleLike}>like</button> <br />
                 {blog.user.name} <br />
